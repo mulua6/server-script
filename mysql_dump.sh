@@ -23,10 +23,12 @@ fi
 
 
 # 在同目录常见文件keys(权限600) 内容如下
-#[clent]
+#[client]
 #host=localhost
 #user=root
 #password=your_password
+
+#如果是整库备份 把$database_name换成--all-databases
 $tool  --defaults-extra-file=keys   -u $username  $database_name > $backup_dir/$database_name-$dd.sql
 
 #写创建备份日志
