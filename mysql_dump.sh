@@ -29,7 +29,7 @@ fi
 #password=your_password
 
 #如果是整库备份 把$database_name换成--all-databases
-$tool  --defaults-extra-file=keys   -u $username  $database_name > $backup_dir/$database_name-$dd.sql
+$tool  --defaults-extra-file=keys   -u$username  $database_name > $backup_dir/$database_name-$dd.sql
 
 #写创建备份日志
 echo "create $backup_dir/$database_name-$dd.dupm" >> $backup_dir/log.txt
